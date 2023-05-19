@@ -46,7 +46,7 @@ export default defineNyxbCommand({
       if (!existsSync(parentDir)) {
          consolji.info('Creating directory', parentDir)
          if (template === 'page')
-            consolji.info('This enables vue-router functionality!')
+            consolji.info('This enables nextjs page functionality!')
 
          await fsp.mkdir(parentDir, { recursive: true })
       }

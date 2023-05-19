@@ -3,7 +3,6 @@ import { red } from '@nyxb/picocolors'
 import type { ConsoljiReporter } from 'consolji'
 import { consolji } from 'consolji'
 import { commands } from './commands'
-import { showBanner } from './utils/banner'
 
 async function _main() {
    const _argv = (process.env.__CLI_ARGV__ ? JSON.parse(process.env.__CLI_ARGV__) : process.argv).slice(2)
@@ -13,8 +12,6 @@ async function _main() {
       ],
    })
    const command = args._.shift() || 'usage'
-
-   showBanner(command === 'dev' && args.clear !== false && !args.help)
 
    if (!(command in commands)) {
       consolji.log(`\n${red(`Invalid command ${command}`)}`)

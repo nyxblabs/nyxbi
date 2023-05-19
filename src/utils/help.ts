@@ -1,8 +1,8 @@
 import { cyan, magenta } from '@nyxb/picocolors'
 import consolji from 'consolji'
-import type { NuxtCommandMeta } from '../commands'
+import type { NyxbCommandMeta } from '../commands'
 
-export function showHelp(meta?: Partial<NuxtCommandMeta>) {
+export function showHelp(meta?: Partial<NyxbCommandMeta>) {
    const sections: string[] = []
 
    if (meta) {
@@ -13,7 +13,7 @@ export function showHelp(meta?: Partial<NuxtCommandMeta>) {
          sections.push(magenta('⋮ ') + meta.description)
    }
 
-   sections.push(`Use ${cyan('npx nuxi [command] --help')} to see help for each command`)
+   sections.push(`Use ${cyan('npx nyxbi [command] --help')} to see help for each command`)
 
    consolji.log(`${sections.join('\n\n')}\n`)
 }
