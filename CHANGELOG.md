@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/nyxblabs/nyxbi/compare/v0.0.5...v0.0.6)
+
+
+### 🚀 Enhancements
+
+  - **cli-wrapper.ts:** Add wrapper for CLI entrypoint to enable restartable process The `cli-wrapper.ts` file is added to wrap the CLI entrypoint in a restartable process. This is done to enable the application to be restarted without having to manually stop and start the process. The wrapper is only enabled for the `nuxt dev` command. The wrapper starts a subprocess and listens for messages from the child process. If the child process sends a `nuxt:restart` message, the subprocess is killed and a new subprocess is started. ([c16d014](https://github.com/nyxblabs/nyxbi/commit/c16d014))
+
+### ❤️  Contributors
+
+- Nyxb <contact@nyxb.xyz>
+
 ## v0.0.5
 
 [compare changes](https://github.com/nyxblabs/nyxbi/compare/v0.0.4...v0.0.5)
