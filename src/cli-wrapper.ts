@@ -7,7 +7,7 @@ import type { ChildProcess } from 'node:child_process'
 
 const cliEntry = new URL('../dist/cli-run.mjs', import.meta.url)
 
-// Only enable wrapper for nuxt dev command
+// Only enable wrapper for nyxb dev command
 if (process.argv[2] === 'dev') {
    process.env.__CLI_ARGV__ = JSON.stringify(process.argv)
    startSubprocess()
@@ -37,11 +37,5 @@ function startSubprocess() {
       childProc = fork(fileURLToPath(cliEntry))
       // eslint-disable-next-line curly
       childProc.on('close', (code) => { if (code) { process.exit(code) } })
-      childProc.on('message', (message) => {
-         if ((message as { type: string })?.type === 'nuxt:restart') {
-            childProc?.kill()
-            startSubprocess()
-         }
-      })
    }
 }

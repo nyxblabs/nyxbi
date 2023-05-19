@@ -15,7 +15,7 @@ export default defineNyxbCommand({
    },
    async invoke(args) {
       // Clone template
-      const template = args.template || args.t || 'v3'
+      const template = args.template || args.t || 'nextjs'
 
       if (typeof template === 'boolean') {
          consolji.error('Please specify a template!')
@@ -30,7 +30,7 @@ export default defineNyxbCommand({
             force: args.force,
             offline: args.offline,
             preferOffline: args['prefer-offline'],
-            registry: process.env.NUXI_INIT_REGISTRY || DEFAULT_REGISTRY,
+            registry: process.env.NYXI_INIT_REGISTRY || DEFAULT_REGISTRY,
          })
       }
       catch (err) {
@@ -50,7 +50,7 @@ export default defineNyxbCommand({
          'Start development server with `nyxr dev`',
       ].filter(Boolean)
 
-      consolji.log(`✨ Nuxt project is created with \`${t.name}\` template. Next steps:`)
+      consolji.log(`✨ Nyxb project is created with \`${t.name}\` template. Next steps:`)
       for (const step of nextSteps)
          consolji.log(` › ${step}`)
 

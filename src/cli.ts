@@ -33,10 +33,6 @@ function wrapReporter(reporter: ConsoljiReporter) {
             return
          const msg = logObj.args[0]
          if (typeof msg === 'string' && !process.env.DEBUG) {
-            // Hide vue-router 404 warnings
-            if (msg.startsWith('[Vue Router warn]: No match found for location with path'))
-               return
-
             // Suppress warning about native Node.js fetch
             if (msg.includes('ExperimentalWarning: The Fetch API is an experimental feature'))
                return

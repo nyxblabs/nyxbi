@@ -21,7 +21,7 @@
   },
   "scripts": {
     "prepack": "buildkarium",
-    "start": "dynot ./src/cli-run.ts --help",
+    "start": "dynot testAddCommand.ts",
     "release": "nyxlx changelogen@latest --release && git push --follow-tags && pnpm publish"
   },
   "devDependencies": {
