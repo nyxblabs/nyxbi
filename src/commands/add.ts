@@ -7,7 +7,7 @@ import { defineNyxbCommand } from './index'
 export default defineNyxbCommand({
    meta: {
       name: 'add',
-      usage: `npx nuxi add [--cwd] [--force] ${Object.keys(templates).join('|')} <name> <fileType>`,
+      usage: `npx nyxbi add [--cwd] [--force] ${Object.keys(templates).join('|')} <name> <fileType>`,
       description: 'Create a new template file.',
    },
    async invoke(args) {
