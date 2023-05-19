@@ -1,0 +1,68 @@
+{
+  "name": "nyxbi",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Dennis Ollhoff <contact@nyxb.xyz>",
+  "license": "MIT",
+  "hompage": "https://💻nyxb.ws",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyxblabs/nyxbi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyxblabs/nyxbi/issues"
+  },
+  "bin": "./bin/nyxbi.mjs",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./cli": "./bin/nuxi.mjs"
+  },
+  "scripts": {
+    "prepack": "buildkarium",
+    "start": "dynot ./src/cli-run.ts --help",
+    "release": "nyxlx changelogen@latest --release && git push --follow-tags && pnpm publish"
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "0.0.53",
+    "@nyxb/picocolors": "1.0.2",
+    "@types/clear": "^0.1.2",
+    "@types/flat": "^5.0.2",
+    "@types/mri": "^1.1.1",
+    "@types/node": "^20.2.1",
+    "@types/semver": "^7.5.0",
+    "buildkarium": "^0.0.2",
+    "chokidar": "^3.5.3",
+    "clear": "^0.1.0",
+    "clipboardy": "^3.0.0",
+    "configerium": "^0.0.2",
+    "consolji": "^0.1.4",
+    "deep-object-diff": "^1.1.9",
+    "dynot": "^0.1.8",
+    "earlist": "^0.0.3",
+    "esmnxuts": "^0.0.10",
+    "execa": "^7.1.1",
+    "flat": "^5.0.2",
+    "gitize": "^0.0.2",
+    "http-lean": "^0.0.3",
+    "magicase": "^0.0.2",
+    "mri": "^1.2.0",
+    "nyxdefaults": "^0.0.3",
+    "nyxdefer": "^0.0.4",
+    "nyxhash": "^0.0.5",
+    "nyxjson": "^0.0.3",
+    "nyxpath": "^0.0.4",
+    "pkg-def": "^0.0.7",
+    "semver": "^7.5.0",
+    "url-ops": "^0.0.4"
+  },
+  "optionalDependencies": {
+    "fsevents": "~2.3.2"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "keywords": []
+}

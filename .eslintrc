@@ -1,0 +1,8 @@
+{
+    "extends": [
+        "@nyxb"
+    ],
+    "rules": {
+        "max-statements-per-line": 0
+    }
+}
